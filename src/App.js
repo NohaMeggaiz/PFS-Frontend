@@ -11,6 +11,7 @@ import Footer from './Components/Footer/Footer';
 import men_banner from './Components/Assets/banner_mens.png';
 import women_banner from './Components/Assets/banner_women.png';
 import kid_banner from './Components/Assets/banner_kids.png';
+import PlaceOrder from './Pages/PlaceOrder';
 
 
 function App() {
@@ -30,6 +31,8 @@ function App() {
         </Route>
         <Route path='/cart' element={<Cart/> } ></Route>
         <Route path='/login' element={<LoginSignUp/> } ></Route>
+        
+        <Route path='/order' element={<PlaceOrder/>} ></Route>
       
       </Routes>
       <Footer></Footer>

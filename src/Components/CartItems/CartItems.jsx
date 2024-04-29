@@ -2,12 +2,15 @@ import React, { useContext } from "react";
 import './CartItems.css'
 import { ShopContext } from "../../Context/ShopContext";
 import remove_icon from '../Assets/cart_cross_icon.png';
-
+import { useNavigate } from "react-router-dom";
+//import Stripe from 'stripe';
 
 
 const CartItems =()=>{
 
-   const {all_product,cartItems,RemoveFromCart,getTotalCartAmount}=useContext(ShopContext);
+    const navigate = useNavigate();
+
+    const {all_product,cartItems,RemoveFromCart,getTotalCartAmount}=useContext(ShopContext);
 
     return (
     <div className="CartItems">
@@ -63,7 +66,7 @@ const CartItems =()=>{
 
 
             </div>
-            <button>Proceed to checkout</button>
+            <button onClick={()=>navigate('/order')} >Proceed to checkout</button>
         </div>
         <div className="cartitem-promocode">
             <p>If you have a promo code, Enter it here</p>
